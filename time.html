@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 
 <section id="progress">
-  <p style="font-size:60px;justify-content: center;display:flex; align-items:center;text-align:center;color:#fff;">週年校慶時間表 </p>
+  <div class="topic">週年校慶程序</div>
     <p style="justify-content: center;display: flex; align-items:center;color:#fff;border-top: 6px solid #d8b800;border-bottom: 6px solid #d8b800;">
         日期：2025年12月5日 <br />
         地點：本校禮堂
@@ -150,7 +150,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 
 <section id="registration">
-  <p style="text-align:center;color:#fff;">校友報名
+  <div class="topic">
+    <p>校友報名</p>
+    </div>
     <br>*由於座位有限，故請各畢業生先填妥表格索取入場券，敬請見諒。 
     <br>
     <br><a href="https://www.nthyktpdss.edu.hk/tc/index.php" target="_blank"><button type="button">校友報名表格</button></a>
@@ -160,7 +162,15 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 
 <section id="reward">
-  <p style="font-size:60px;justify-content: center;display:flex; align-items:center;text-align:center;color:#fff;">同學佳績</p>
+  <div class="topic">
+    <p>同學佳績</p>
+  </div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
   <div class="reward-grid">
       <div class="tl-item"><div class="tl-bg" style="background-image: url(IMG_8141.JPG)"></div><div class="tl-year"><p class="f2 heading--sanSerif">STEAM</p></div><div class="tl-content"><h1>IVE 載人太陽能車決賽</h1><p>冠軍</p></div></div>
       <div class="tl-item"><div class="tl-bg" style="background-image: url(IMG_2194.JPG)"></div><div class="tl-year"><p class="f2 heading--sanSerif">STEAM</p></div><div class="tl-content"><h1>標題</h1><br><p>內容</p></div></div>
@@ -179,7 +189,43 @@ document.addEventListener('DOMContentLoaded', function() {
 </body>
 </html>
 <style>
-  
+
+.topic {
+  margin: 0;
+  text-align:center;
+  position: relative;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 100px;
+  color: #FFD700;
+  letter-spacing: 20px;
+  text-shadow:
+    2px 2px 4px rgba(0,0,0,0.5),
+    0 0 20px rgba(255,215,0,0.7);
+} 
+.confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #FFD700;
+      box-shadow: 
+        200px 300px #FF6347,
+        500px 150px #FFA500,
+        900px 700px #ADFF2F,
+        1200px 250px #FF69B4,
+        350px 800px #00CED1,
+        1400px 600px #BA55D3;
+      animation: confetti-fall 5s infinite linear;
+    } 
+    .confetti:nth-child(2) { left: 150px; animation-delay: 1s; }
+    .confetti:nth-child(3) { left: 400px; animation-delay: 2s; }
+    .confetti:nth-child(4) { left: 800px; animation-delay: 3s; }
+    .confetti:nth-child(5) { left: 1200px; animation-delay: 4s; }
+    .confetti:nth-child(6) { left: 600px; animation-delay: 2.5s; }
+      @keyframes confetti-fall {
+      0%   { top: -20px; opacity: 1; }
+      100% { top: 3220px; opacity: 0; }
+    }
 section {
   display: grid;
   height:100%;
@@ -190,6 +236,18 @@ section {
   padding: 0;
 }
 section#reward {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section#registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section#progress {
   display: flex;
   flex-direction: column;
   align-items: center;
