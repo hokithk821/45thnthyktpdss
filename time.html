@@ -174,8 +174,8 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="confetti"></div>
   <div class="reward-grid">
       <div class="tl-item"><div class="tl-bg" style="background-image: url(IMG_8141.JPG)"></div><div class="tl-year"><p>STEAM</p></div><div class="tl-content"><h1>IVE 載人太陽能車決賽</h1><p>冠軍</p></div></div>
-      <div class="tl-item"><div class="tl-bg" style="background-image: url(IMG_2194.JPG)"></div><div class="tl-year"><p>STEAM</p></div><div class="tl-content"><h1>標題</h1><br><p>內容</p></div></div>
-      <div class="tl-item"><div class="tl-bg" style="background-image: url(TP_354.jpg)"></div><div class="tl-year"><p>STEAM</p></div><div class="tl-content"><h1>標題</h1><p>內容</p></div></div>
+      <div class="tl-item"><div class="tl-bg" style="background-image: url(1757662283X1rFt.jpg)"></div><div class="tl-year"><p>STEAM</p></div><div class="tl-content"><h1>騰訊小紅花科創家社區實踐獎勵計劃</h1><p>冠軍</p></div></div>
+      <div class="tl-item"><div class="tl-bg" style="background-image: url(sport1.jpg)"></div><div class="tl-year"><p>SPORT</p></div><div class="tl-content"><h1>大埔及北區中學校際排球比賽</h1><p>男子組亞軍</p></div></div>
       <div class="tl-item"><div class="tl-bg" style="background-image: url(car.jpg)"></div><div class="tl-year"><p>STEAM</p></div><div class="tl-content"><h1>IVE 載人太陽能車決賽</h1><p>冠軍</p></div></div>
       <div class="tl-item"><div class="tl-bg" style="background-image: url(2025.09.01.DS4_2459.JPG)"></div><div class="tl-year"><p>STEAM</p></div><div class="tl-content"><h1>標題</h1><p>內容</p></div></div>
       <div class="tl-item"><div class="tl-bg" style="background-image: url(IMG_8141.JPG)"></div><div class="tl-year"><p>STEAM</p></div><div class="tl-content"><h1>標題</h1><p>內容</p></div></div>
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </body>
 </html>
 <style>
-/* 讓 .f2.heading--sanSerif 文字可自動換行且不溢出 */
+
 .f2.heading--sanSerif {
   font-size: clamp(1em, 2vw, 2em);
   word-break: break-word;
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 
-
+/*Topic 黃色大字*/
 .topic {
   margin: 0;
   text-align:center;
@@ -213,6 +213,8 @@ document.addEventListener('DOMContentLoaded', function() {
     2px 2px 4px rgba(0,0,0,0.5),
     0 0 20px rgba(255,215,0,0.7);
 } 
+
+/*星星*/
 .confetti {
       position: absolute;
       width: 10px;
@@ -237,6 +239,8 @@ document.addEventListener('DOMContentLoaded', function() {
       0%   { top: -20px; opacity: 1; }
       100% { top: 3220px; opacity: 0; }
     }
+
+/*每個Section 大小*/
 section {
   display: grid;
   height:100%;
@@ -264,15 +268,18 @@ section#progress {
   align-items: center;
   justify-content: center;
 }
+
 .reward-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(180px, 1fr));
   grid-template-rows: repeat(2, minmax(180px, 1fr));
   gap: 50px;
   margin: 50px 0;
+  position: relative;
 }
+
 .reward-grid .tl-item {
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/9;
   height: 100%;
   width: 100%;
   min-height: 100%;
@@ -284,13 +291,15 @@ section#progress {
   align-items: center;
   justify-content: center;
 }
-
 .reward-grid .tl-item:hover {
-  transform: scale(4);
-  z-index: 1;
+  position: grid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(3);
+  z-index: 10;
+
 }
 
-/* 對齊 .tl-year 和 .tl-content */
 
 .reward-grid .tl-content {
   position: absolute;
