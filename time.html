@@ -192,19 +192,13 @@ document.addEventListener('DOMContentLoaded', function() {
 <style>
 /* 讓 .f2.heading--sanSerif 文字可自動換行且不溢出 */
 .f2.heading--sanSerif {
-  font-size: clamp(1.5em, 2vw, 1.2em);
+  font-size: clamp(1em, 2vw, 2em);
   word-break: break-word;
   white-space: normal;
   overflow-wrap: anywhere;
   line-height: 1.2;
 }
-.f3.heading--sanSerif {
-  font-size: clamp(0.7em, 0.8vw, 1em);
-  word-break: break-word;
-  white-space: normal;
-  overflow-wrap: anywhere;
-  line-height: 1.2;
-}
+
 
 
 .topic {
@@ -428,6 +422,7 @@ body {
   margin: 0 1.618em;
   top: 55%;
   opacity: 0;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5), 0 0 8px #04b6fd;
 }
 .tl-content h1 {
   font-family: "Pathway Gothic One", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -435,16 +430,18 @@ body {
   color: #ffffff;
   font-size: 1.44rem;
   font-weight: normal;
+
 }
 
 .tl-year {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 1;
   border-top: 3px solid #fff;
   border-bottom: 3px solid #fff;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5), 0 0 8px #04b6fd;
 }
 .tl-year p {
   font-family: "Pathway Gothic One", Helvetica Neue, Helvetica, Arial, sans-serif;
